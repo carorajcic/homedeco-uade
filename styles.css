@@ -314,14 +314,6 @@ footer p {
     padding: 1.8rem;
 }
 
-.producto-precio {
-    color: var(--marron);
-    font-weight: bold;
-    font-size: 1.3rem;
-    margin-top: 1rem;
-    font-family: 'Georgia', serif;
-}
-
 /* FORMULARIO */
 
 form {
