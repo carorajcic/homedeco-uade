@@ -1,8 +1,3 @@
-<<<<<<< HEAD
-# 🛒 DecoHome
-
-Sitio web con sistema de carrito de compras que aplica automáticamente la mejor promoción disponible.
-=======
 # DecoHome
 
 > Sitio web de decoración y muebles para el hogar
