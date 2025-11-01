@@ -3,7 +3,6 @@
 > Sitio web de decoración y muebles para el hogar
 ![HTML5](https://img.shields.io/badge/HTML5-E34F26?logo=html5&logoColor=white)
 ![CSS3](https://img.shields.io/badge/CSS3-1572B6?logo=css3&logoColor=white)
->>>>>>> b529ab9ffa6b0f4c82424dd298be224e51cfb4a6
 
 ---
 
