@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Promociones - decohome</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="promociones.css">
+</head>
+<body>
+    <!-- HEADER -->
+    <header>
+        <div class="logo">decohome</div>
+        
+        <!-- NAV -->
+        <nav>
+            <ul>
+                <li><a href="index.html#inicio">inicio</a></li>
+                <li><a href="index.html#nosotros">nosotros</a></li>
+                <li><a href="index.html#productos">productos</a></li>
+                <li><a href="promociones.html">promociones</a></li>
+                <li><a href="index.html#contacto">contacto</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <!-- MAIN -->
+    <main>
+        <!-- Hero Promociones -->
+        <section class="hero">
+            <h1>Promociones especiales</h1>
+            <p class="centrado espaciado">Agregá productos al carrito y obtené descuentos automáticos</p>
+        </section>
+
+        <section>
+            <div class="container">
+                <div class="intro-promo">
+                    <h2>Nuestras promociones</h2>
+                    <div class="promociones-badges">
+                        <div class="promo-badge">
+                            <h4>2x1 en Decoración</h4>
+                            <p>50% OFF en el producto más barato</p>
+                        </div>
+                        <div class="promo-badge">
+                            <h4>3x2 en Muebles</h4>
+                            <p>El mueble más barato va de regalo</p>
+                        </div>
+                        <div class="promo-badge">
+                            <h4>10% OFF</h4>
+                            <p>En compras mayores a $30.000</p>
+                        </div>
+                    </div>
+                    <p class="centrado" style="margin-top: 2rem; font-style: italic;">El sistema aplica automáticamente la mejor promoción según tu carrito</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Catálogo y Carrito -->
+        <section id="tienda">
+            <div class="container">
+                <div class="tienda-layout">
+                    <!-- Catálogo de Productos -->
+                    <div class="catalogo">
+                        <h2>Catálogo de Productos</h2>
+                        
+                        <!-- Decoración -->
+                        <div class="categoria">
+                            <h3>Decoración</h3>
+                            <div class="productos-lista" id="productos-decoracion"></div>
+                        </div>
+
+                        <!-- Muebles -->
+                        <div class="categoria">
+                            <h3>Muebles</h3>
+                            <div class="productos-lista" id="productos-muebles"></div>
+                        </div>
+
+                        <!-- Iluminación -->
+                        <div class="categoria">
+                            <h3>Iluminación</h3>
+                            <div class="productos-lista" id="productos-iluminacion"></div>
+                        </div>
+                    </div>
+
+                    <!-- Carrito de Compras -->
+                    <div class="carrito-sidebar">
+                        <div class="carrito-header">
+                            <h3>Tu Carrito</h3>
+                            <span id="items-count" class="items-badge">0 items</span>
+                        </div>
+
+                        <div id="carrito-items" class="carrito-items">
+                            <p class="carrito-vacio">Tu carrito está vacío</p>
+                        </div>
+
+                        <div class="carrito-resumen">
+                            <div class="resumen-linea">
+                                <span>Subtotal:</span>
+                                <span id="subtotal">$0,00</span>
+                            </div>
+                            <div class="resumen-linea promocion-aplicada" id="promo-aplicada" style="display: none;">
+                                <span id="promo-nombre">Descuento:</span>
+                                <span id="promo-monto">-$0,00</span>
+                            </div>
+                            <div class="resumen-linea total">
+                                <span><strong>Total:</strong></span>
+                                <span id="total"><strong>$0,00</strong></span>
+                            </div>
+                            <button id="btn-vaciar" class="btn-secondary" style="display: none;">Vaciar Carrito</button>
+                            <button id="btn-finalizar" class="btn-primary" style="display: none;">Finalizar Compra</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Promociones -->
+        <section>
+            <div class="container">
+                <aside class="destacado">
+                    <h3>Más info de las promos</h3>
+                    <ul class="tips-list">
+                        <li><strong>Promoción 2x1 en Deco:</strong> Si comprás 2 artículos de decoración, el de menor precio tiene 50% de descuento</li>
+                        <li><strong>Promoción 3x2 en Muebles:</strong> Si comprás 3 muebles, el de menor precio sale completamente gratis</li>
+                        <li><strong>Descuento por monto:</strong> Si tu compra supera los $30.000, obtenés 10% de descuento</li>
+                        <li><strong>Las promociones no son acumulables entre sí.</strong> El sistema calcula y aplica la mejor promoción para vos.</li>
+                    </ul>
+                </aside>
+            </div>
+        </section>
+    </main>
+
+    <!-- FOOTER -->
+    <footer>
+        <p>&copy; 2025 - Todos los derechos reservados</p>
+        <p>Local 89 - Galería Central Rosario</p>
+    </footer>
+
+    <script src="promociones.js"></script>
+</body>
+</html>

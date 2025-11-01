@@ -55,7 +55,6 @@ p {
     text-align: justify;
 }
 
-
 /* HEADER */
 header {
     background-color: var(--blanco);
@@ -65,6 +64,16 @@ header {
     top: 0;
     z-index: 100;
     box-shadow: 0 2px 8px rgba(75, 64, 53, 0.08);
+}
+
+.logo {
+    font-size: 1.8rem;
+    font-weight: normal;
+    color: var(--marron-oscuro);
+    text-align: center;
+    margin-bottom: 1rem;
+    letter-spacing: 3px;
+    font-family: 'Georgia', serif;
 }
 
 /* NAV */
@@ -110,106 +119,7 @@ section:nth-child(even) {
     background-color: var(--beige-claro);
 }
 
-/* ARTICLE */
-article {
-    margin-bottom: 2rem;
-}
-
-.producto-card {
-    flex: 1;
-    min-width: 280px;
-    max-width: 350px;
-    background-color: var(--blanco);
-    border: 1px solid var(--beige-oscuro);
-    border-radius: 4px;
-    padding: 0;
-    overflow: hidden;
-    transition: all 0.3s;
-    display: flex;
-    flex-direction: column;
-}
-
-.imagen {
-    flex: 1;
-    min-width: 300px;
-    background: linear-gradient(135deg, var(--beige) 0%, var(--marron-claro) 100%);
-    height: 350px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    border-radius: 4px;
-    border: 1px solid var(--beige-oscuro);
-    overflow: hidden;
-}
-
-.imagen img {
-    width: 100%;
-    height: 100%;
-    object-fit: cover; 
-    display: block;
-}
-
-.producto-imagen {
-    height: 300px;  /* Altura */
-    min-height: 300px;  /* Para que no se achique */
-    background: linear-gradient(135deg, var(--beige-claro), var(--beige-oscuro));
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    border-bottom: 1px solid var(--beige-oscuro);
-    overflow: hidden;
-    position: relative;
-    flex-shrink: 0;  /* Para que no se comprima */
-}
-
-.producto-imagen img {
-    width: 100%;
-    height: 100%;
-    object-fit: cover; /* Ajuste imagen */
-    display: block;
-}
-
-.producto-info {
-    padding: 1.8rem;
-    flex-grow: 1;
-    display: flex;
-    flex-direction: column;
-}
-
-/* ASIDE */
-aside {
-    background-color: var(--beige);
-    padding: 1.8rem;
-    border-radius: 4px;
-    margin-top: 2rem;
-    border-left: 3px solid var(--marron-claro);
-}
-
-/* FOOTER */
-footer {
-    background-color: var(--marron-oscuro);
-    color: var(--beige-claro);
-    text-align: center;
-    padding: 2.5rem;
-}
-
-footer p {
-    color: var(--beige-claro);
-    text-align: center;
-}
-
-/* Bordes, márgenes y padding */
-
-.logo {
-    font-size: 1.8rem;
-    font-weight: normal;
-    color: var(--marron-oscuro);
-    text-align: center;
-    margin-bottom: 1rem;
-    letter-spacing: 3px;
-    font-family: 'Georgia', serif;
-}
-
+/* HERO */
 .hero {
     background: linear-gradient(135deg, var(--beige-claro) 0%, var(--beige) 100%);
     padding: 100px 20px;
@@ -240,7 +150,6 @@ footer p {
 }
 
 /* CONTENEDORES */
-
 .container {
     max-width: 1200px;
     margin: 0 auto;
@@ -268,13 +177,33 @@ footer p {
     display: flex;
     align-items: center;
     justify-content: center;
-    font-size: 5rem;
     border-radius: 4px;
     border: 1px solid var(--beige-oscuro);
+    overflow: hidden;
 }
 
-/* FLEXBOX */
+.imagen img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+}
 
+/* ARTICLE */
+article {
+    margin-bottom: 2rem;
+}
+
+/* ASIDE */
+aside {
+    background-color: var(--beige);
+    padding: 1.8rem;
+    border-radius: 4px;
+    margin-top: 2rem;
+    border-left: 3px solid var(--marron-claro);
+}
+
+/* PRODUCTOS */
 .productos-grid {
     display: flex;
     flex-wrap: wrap;
@@ -293,6 +222,8 @@ footer p {
     padding: 0;
     overflow: hidden;
     transition: all 0.3s;
+    display: flex;
+    flex-direction: column;
 }
 
 .producto-card:hover {
@@ -301,21 +232,33 @@ footer p {
 }
 
 .producto-imagen {
-    height: 220px;
+    height: 300px;
+    min-height: 300px;
     background: linear-gradient(135deg, var(--beige-claro), var(--beige-oscuro));
     display: flex;
     align-items: center;
     justify-content: center;
-    font-size: 4rem;
     border-bottom: 1px solid var(--beige-oscuro);
+    overflow: hidden;
+    position: relative;
+    flex-shrink: 0;
+}
+
+.producto-imagen img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
 }
 
 .producto-info {
     padding: 1.8rem;
+    flex-grow: 1;
+    display: flex;
+    flex-direction: column;
 }
 
 /* FORMULARIO */
-
 form {
     max-width: 600px;
     margin: 3rem auto;
@@ -341,6 +284,7 @@ label {
 input[type="text"],
 input[type="email"],
 input[type="tel"],
+input[type="number"],
 textarea,
 select {
     width: 100%;
@@ -365,7 +309,8 @@ textarea {
     min-height: 120px;
 }
 
-input[type="submit"] {
+input[type="submit"],
+button[type="submit"] {
     background-color: var(--marron);
     color: var(--blanco);
     padding: 14px 35px;
@@ -378,12 +323,13 @@ input[type="submit"] {
     transition: all 0.3s;
 }
 
-input[type="submit"]:hover {
+input[type="submit"]:hover,
+button[type="submit"]:hover {
     background-color: var(--blanco);
     color: var(--marron);
 }
 
-
+/* CONTACTO */
 .info-contacto {
     display: flex;
     flex-wrap: wrap;
@@ -410,8 +356,44 @@ input[type="submit"]:hover {
     margin-bottom: 0.8rem;
 }
 
-/* RESPONSIVE */
+/* FOOTER */
+footer {
+    background-color: var(--marron-oscuro);
+    color: var(--beige-claro);
+    text-align: center;
+    padding: 2.5rem;
+}
 
+footer p {
+    color: var(--beige-claro);
+    text-align: center;
+}
+
+/* UTILIDADES */
+.centrado {
+    text-align: center;
+}
+
+.espaciado {
+    margin: 2rem 0;
+}
+
+.destacado {
+    background-color: var(--beige);
+    padding: 1.2rem;
+    border-radius: 4px;
+    border-left: 3px solid var(--marron-claro);
+}
+
+.subtitulo {
+    font-size: 1.1rem;
+    color: var(--texto-claro);
+    text-align: center;
+    margin-bottom: 3rem;
+    font-style: italic;
+}
+
+/* RESPONSIVE */
 @media (max-width: 768px) {
     h1 {
         font-size: 2rem;
@@ -422,9 +404,7 @@ input[type="submit"]:hover {
     }
 
     nav ul {
-        flex-direction: column;
-        gap: 1rem;
-        text-align: center;
+        gap: 1.5rem;
     }
 
     .contenido-flex {
@@ -452,7 +432,6 @@ input[type="submit"]:hover {
 
     .imagen {
         height: 250px;
-        font-size: 3.5rem;
     }
 
     .btn {
@@ -463,29 +442,9 @@ input[type="submit"]:hover {
     form {
         padding: 1.5rem;
     }
-}
 
-/* === UTILIDADES Y BUENAS PRÁCTICAS === */
-
-.centrado {
-    text-align: center;
-}
-
-.espaciado {
-    margin: 2rem 0;
-}
-
-.destacado {
-    background-color: var(--beige);
-    padding: 1.2rem;
-    border-radius: 4px;
-    border-left: 3px solid var(--marron-claro);
-}
-
-.subtitulo {
-    font-size: 1.1rem;
-    color: var(--texto-claro);
-    text-align: center;
-    margin-bottom: 3rem;
-    font-style: italic;
+    nav ul {
+        flex-direction: column;
+        gap: 1rem;
+    }
 }
